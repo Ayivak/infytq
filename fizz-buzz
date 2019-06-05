@@ -19,3 +19,9 @@ int main()
 
     return 0;
 }
+
+query:
+SELECT MAX(avgSales.TotalSale)
+FROM (SELECT AVG(TotalSale) AS 'TotalSale' FROM Sales GROUP BY SalesPerson) AS avgSales
+
+
